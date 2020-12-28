@@ -8,4 +8,10 @@
         <item>4 players</item>
         <item>5 players</item>
     </string-array>
+    <string name="players_one">Player 1</string>
+    <string name="players_two">Player 2</string>
+    <string name="players_three">Player 3</string>
+    <string name="players_four">Player 4</string>
+    <string name="players_five">Player 5</string>
+    <string name="players_name">Name</string>
 </resources>

@@ -12,6 +12,18 @@
         android:layout_height="wrap_content">
 
 
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@id/title"
+            app:layout_constraintDimensionRatio="5"
+            app:layout_constraintEnd_toStartOf="@id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_en" />
+
         <TextView
             android:id="@+id/title"
             android:layout_width="0dp"
@@ -22,15 +34,16 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
             app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/logo" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:gravity="center_vertical"
             android:text="@string/players_count"
+            app:layout_constraintBottom_toTopOf="@+id/barrierNumberPlayers"
             app:layout_constraintEnd_toStartOf="@+id/playersCountSpinner"
             app:layout_constraintStart_toStartOf="@+id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -39,7 +52,7 @@
             android:id="@+id/playersCountSpinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -58,5 +71,79 @@
             android:orientation="vertical"
             app:layout_constraintGuide_end="16dp" />
 
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierNumberPlayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="textView2,playersCountSpinner"
+            tools:layout_editor_absoluteY="85dp" />
+
+        <TextView
+            android:id="@+id/tvPlayerOne"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/players_one"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="@id/barrierPlayerOne"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/barrierNumberPlayers" />
+
+        <EditText
+            android:id="@+id/etPlayerOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/players_name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@id/barrierPlayerOne"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toEndOf="@+id/tvPlayerOne"
+            app:layout_constraintTop_toBottomOf="@+id/barrierNumberPlayers" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierPlayerOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvPlayerOne,etPlayerOne"
+            tools:layout_editor_absoluteY="151dp" />
+
+        <TextView
+            android:id="@+id/tvPlayerTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/players_two"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/barrierPlayerOne" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/players_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toEndOf="@+id/tvPlayerTwo"
+            app:layout_constraintTop_toBottomOf="@+id/etPlayerOne" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierPlayerTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvPlayerTwo,editTextTextPersonName2"
+            tools:layout_editor_absoluteY="207dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

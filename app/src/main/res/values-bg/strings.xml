@@ -8,4 +8,10 @@
         <item>5 играчи</item>
     </string-array>
     <string name="title">Калкулатор за Шерифът на Нотингам</string>
+    <string name="players_one">Играч 1</string>
+    <string name="players_two">Играч 2</string>
+    <string name="players_three">Играч 3</string>
+    <string name="players_four">Играч 4</string>
+    <string name="players_five">Играч 5</string>
+    <string name="players_name">Име</string>
 </resources>
