@@ -1,4 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">The Sheriff of Nottingham</string>
+    <string name="title">The Sheriff of Nottingham calculator</string>
     <string name="players_count">Number of players</string>
+    <string-array name="players_count">
+        <item>3 players</item>
+        <item>4 players</item>
+        <item>5 players</item>
+    </string-array>
 </resources>

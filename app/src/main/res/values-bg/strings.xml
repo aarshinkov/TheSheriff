@@ -2,4 +2,10 @@
 <resources>
     <string name="app_name">Шерифът на Нотингам</string>
     <string name="players_count">Брой на играчите</string>
+    <string-array name="players_count">
+        <item>3 играчи</item>
+        <item>4 играчи</item>
+        <item>5 играчи</item>
+    </string-array>
+    <string name="title">Калкулатор за Шерифът на Нотингам</string>
 </resources>
