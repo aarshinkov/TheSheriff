@@ -186,6 +186,7 @@
             android:gravity="center_vertical"
             android:text="@string/players_four"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@id/barrierPlayerFour"
             app:layout_constraintStart_toStartOf="@+id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@+id/tvPlayerThree" />
@@ -200,6 +201,7 @@
             android:ems="10"
             android:hint="@string/players_name"
             android:inputType="textPersonName"
+            android:visibility="invisible"
             app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
             app:layout_constraintStart_toEndOf="@+id/tvPlayerFour"
             app:layout_constraintTop_toBottomOf="@+id/etPlayerThree" />
@@ -220,6 +222,7 @@
             android:gravity="center_vertical"
             android:text="@string/players_five"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@+id/tvPlayerFour" />
@@ -234,6 +237,7 @@
             android:ems="10"
             android:hint="@string/players_name"
             android:inputType="textPersonName"
+            android:visibility="invisible"
             app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
             app:layout_constraintStart_toEndOf="@+id/tvPlayerFive"
             app:layout_constraintTop_toBottomOf="@+id/etPlayerFour" />

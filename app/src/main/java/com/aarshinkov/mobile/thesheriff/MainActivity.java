@@ -7,7 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,16 +31,32 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                TextView tvPlayerFour = findViewById(R.id.tvPlayerFour);
+                EditText etPlayerFour = findViewById(R.id.etPlayerFour);
+                TextView tvPlayerFive = findViewById(R.id.tvPlayerFive);
+                EditText etPlayerFive = findViewById(R.id.etPlayerFive);
 
                 if (position == 1) {
                     // 4 players
-
+                    tvPlayerFour.setVisibility(View.VISIBLE);
+                    etPlayerFour.setVisibility(View.VISIBLE);
+                    tvPlayerFive.setVisibility(View.INVISIBLE);
+                    etPlayerFive.setVisibility(View.INVISIBLE);
+                    etPlayerFive.setText("");
                 } else if (position == 2) {
                     // 5 players
-
+                    tvPlayerFour  .setVisibility(View.VISIBLE);
+                    etPlayerFour.setVisibility(View.VISIBLE);
+                    tvPlayerFive.setVisibility(View.VISIBLE);
+                    etPlayerFive.setVisibility(View.VISIBLE);
                 } else {
                     // 3 players (default)
-                    
+                    tvPlayerFour.setVisibility(View.INVISIBLE);
+                    etPlayerFour.setVisibility(View.INVISIBLE);
+                    etPlayerFour.setText("");
+                    tvPlayerFive.setVisibility(View.INVISIBLE);
+                    etPlayerFive.setVisibility(View.INVISIBLE);
+                    etPlayerFive.setText("");
                 }
             }
 
