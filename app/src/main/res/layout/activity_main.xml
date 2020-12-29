@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toStartOf="@id/rightGuideline"
             app:layout_constraintStart_toStartOf="@+id/leftGuideline"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_en" />
+            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/title"
