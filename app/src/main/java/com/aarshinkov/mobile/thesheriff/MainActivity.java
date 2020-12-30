@@ -3,14 +3,14 @@ package com.aarshinkov.mobile.thesheriff;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     etPlayerFive.setText("");
                 } else if (position == 2) {
                     // 5 players
-                    tvPlayerFour  .setVisibility(View.VISIBLE);
+                    tvPlayerFour.setVisibility(View.VISIBLE);
                     etPlayerFour.setVisibility(View.VISIBLE);
                     tvPlayerFive.setVisibility(View.VISIBLE);
                     etPlayerFive.setVisibility(View.VISIBLE);
@@ -65,5 +65,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_bar_menu, menu);
+        return true;
     }
 }
